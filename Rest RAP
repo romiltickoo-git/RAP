@@ -1,0 +1,31 @@
+--> Rest full ABAP Programming Model
+OData uses stateless communication
+The concept of Business object is used for building  transactional applications.
+The concept of Draft functionality is used for building stateful applications.
+Uses the concept of Business service to create 
+-> OData.
+->InA Service Protocol.
+-> SQL Based services.
+Overview of RAP Architecture
+Rest full ABAP programming is available in 
+-> SAP BTP 
+-> SAP S/4 HANA
+-> Application service ABAP 7.56
+
+
+
+
+Business Object
+Business objects defines real time artifact in enterprise application development 
+Eg: Sales order , Purchase order, Invoice etc.
+Business Object will have one root node and have one child or multiple child.
+
+
+
+> First RAP Application
+Steps to create simple list report 
+1. Create interface view on connection database table.
+2. Since this is read only application we can ignore creating the projection view.
+3. Create Service definition to expose the Interface entity.
+4. Create Service binding to create OData.
+5. Preview Application.
