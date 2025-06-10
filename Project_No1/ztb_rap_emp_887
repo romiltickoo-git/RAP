@@ -1,0 +1,14 @@
+@EndUserText.label : 'Employee Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table ztb_rap_emp_887 {
+
+  key client       : abap.clnt not null;
+  key employee_id  : abap.char(10) not null;
+  employee_name    : abap.char(10);
+  employee_address : abap.char(100);
+  deparment_id     : abap.char(10);
+
+}
