@@ -7,6 +7,7 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
 @Metadata.allowExtensions: true
 define root view entity ZC_STUDENT_5000
 as projection on ZI_STUDENT_5000 as Student   
