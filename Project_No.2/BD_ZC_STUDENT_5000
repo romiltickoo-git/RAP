@@ -1,6 +1,5 @@
 projection;
 //strict ( 2 );
-
 define behavior for ZC_STUDENT_5000 alias Student
 {
   use create;
