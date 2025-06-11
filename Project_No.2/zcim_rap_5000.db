@@ -4,7 +4,6 @@
 @AbapCatalog.deliveryClass : #A
 @AbapCatalog.dataMaintenance : #RESTRICTED
 define table zcim_rap_5000 {
-
   key client     : mandt not null;
   key id         : sysuuid_x16 not null;
   firstname      : abap.char(100);
