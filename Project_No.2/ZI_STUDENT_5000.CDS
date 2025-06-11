@@ -7,6 +7,7 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
 define root view entity ZI_STUDENT_5000
   as select from zcim_rap_5000
 {
