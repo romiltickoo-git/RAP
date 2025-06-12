@@ -8,7 +8,6 @@
     }
 annotate view ZC_STUDENT_5000 with
 {
-
 @UI:{ 
        facet: [{ id          : 'Student' ,
                  purpose     : #STANDARD ,
