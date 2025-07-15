@@ -1,0 +1,24 @@
+@EndUserText.label : 'Draft table for entity ZORD_R_ORDER_ITEMS'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zord_order_i_d {
+
+  key mandt       : mandt not null;
+  key orderitemid : sysuuid_x16 not null;
+  orderid         : sysuuid_x16;
+  productname     : abap.char(35);
+  unitfield       : abap.unit(2);
+  @Semantics.quantity.unitOfMeasure : 'zord_order_i_d.unitfield'
+  quantity        : abap.quan(4,2);
+  cukyfield       : abap.cuky;
+  @Semantics.amount.currencyCode : 'zord_order_i_d.cukyfield'
+  unitprice       : abap.curr(8,2);
+  createdby       : abp_creation_user;
+  createdat       : abp_creation_tstmpl;
+  lastchangedby   : abp_lastchange_user;
+  changedat       : abp_lastchange_tstmpl;
+  "%admin"        : include sych_bdl_draft_admin_inc;
+
+}
