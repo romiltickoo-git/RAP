@@ -1,0 +1,23 @@
+@EndUserText.label : 'Order (Items) DB'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zord_order_i {
+
+  key client      : abap.clnt not null;
+  key orderitemid : sysuuid_x16 not null;
+  orderid         : sysuuid_x16 not null;
+  productname     : abap.char(35);
+  unitfield       : abap.unit(2);
+  @Semantics.quantity.unitOfMeasure : 'zord_order_i.unitfield'
+  quantity        : abap.quan(4,2);
+  cukyfield       : abap.cuky;
+  @Semantics.amount.currencyCode : 'zord_order_i.cukyfield'
+  unitprice       : abap.curr(8,2);
+  createdby       : abp_creation_user;
+  createdat       : abp_creation_tstmpl;
+  lastchangedby   : abp_lastchange_user;
+  changedat       : abp_lastchange_tstmpl;
+
+}
