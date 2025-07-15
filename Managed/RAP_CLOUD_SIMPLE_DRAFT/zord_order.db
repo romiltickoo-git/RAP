@@ -1,0 +1,22 @@
+@EndUserText.label : 'Order (Header) DB'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zord_order {
+
+  key client    : abap.clnt not null;
+  key orderid   : sysuuid_x16 not null;
+  customerid    : sysuuid_x16 not null;
+  orderdate     : abap.dats;
+  curr          : abap.cuky;
+  @Semantics.amount.currencyCode : 'zord_order.curr'
+  amount        : abap.curr(8,2);
+  status        : zord_status;
+  comments      : abap.char(75);
+  createdby     : abp_creation_user;
+  createdat     : abp_creation_tstmpl;
+  lastchangedby : abp_lastchange_user;
+  changedat     : abp_lastchange_tstmpl;
+
+}
