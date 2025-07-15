@@ -1,0 +1,23 @@
+@EndUserText.label : 'Draft table for entity ZORD_R_ORDER'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zord_order_d {
+
+  key mandt     : mandt not null;
+  key orderid   : sysuuid_x16 not null;
+  customerid    : sysuuid_x16;
+  orderdate     : abap.dats;
+  curr          : abap.cuky;
+  @Semantics.amount.currencyCode : 'zord_order_d.curr'
+  amount        : abap.curr(8,2);
+  status        : zord_status;
+  comments      : abap.char(75);
+  createdby     : abp_creation_user;
+  createdat     : abp_creation_tstmpl;
+  lastchangedby : abp_lastchange_user;
+  changedat     : abp_lastchange_tstmpl;
+  "%admin"      : include sych_bdl_draft_admin_inc;
+
+}
